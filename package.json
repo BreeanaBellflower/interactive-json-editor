@@ -1,0 +1,52 @@
+{
+  "name": "interactive-json-editor",
+  "version": "1.0.0",
+  "description": "An interactive react-based editor for JSON Objects",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "styled-components": "^5.3.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.25",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^29.7.0",
+    "rollup": "^2.75.6",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "ts-jest": "^28.0.7",
+    "tslib": "^2.6.3",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "lucide-react": "^0.263.1"
+  },
+  "keywords": [
+    "react",
+    "visual",
+    "json",
+    "editor",
+    "typescript"
+  ],
+  "author": "Breeana Bellflower",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/breeanabellflower/interactive-json-editor.git"
+  }
+}
