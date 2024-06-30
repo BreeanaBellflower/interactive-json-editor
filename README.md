@@ -11,7 +11,7 @@ npm install interactive-json-editor
 ## Usage
 
 ```jsx
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { InteractiveJsonEditor, jsonToEntity } from 'interactive-json-editor';
 
 const TestApp = () => {
@@ -84,9 +84,9 @@ const TestApp = () => {
             width: '400px', 
             height: '400px', 
             resize: 'vertical',
-            backgroundColor: theme === 'light' ? '#f8f8f8' : '#2a2a2a',
-            color: theme === 'light' ? '#333333' : '#ffffff',
-            border: `1px solid ${theme === 'light' ? '#cccccc' : '#555555'}`,
+            backgroundColor: '#2a2a2a',
+            color: '#ffffff',
+            border: '1px solid #555555',
           }}
         />
       </div>
