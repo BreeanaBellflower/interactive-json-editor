@@ -1,6 +1,29 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { PlusCircle, Trash2, ChevronDown, ChevronRight, AlertTriangle } from 'lucide-react';
 
+/**
+ * @typedef {Object} Entity
+ * @property {'object' | 'array' | 'string' | 'integer' | 'float' | 'boolean'} dtype - The data type of the entity
+ * @property {Array<[string, Entity]>} [attributes] - Array of key-value pairs for object and array types
+ * @property {string | number | boolean} [value] - The value for primitive types
+ */
+
+/**
+ * @typedef {Object} Theme
+ * @property {string} background - Background color
+ * @property {string} text - Text color
+ * @property {string} border - Border color
+ * @property {string} button - Button color
+ * @property {string} buttonText - Button text color
+ * @property {string} warning - Warning background color
+ * @property {string} warningBorder - Warning border color
+ * @property {string} warningText - Warning text color
+ * @property {string} error - Error color
+ * @property {string} errorText - Error text color
+ * @property {string} placeholder - Placeholder text color
+ */
+
+
 const defaultTheme = {
   background: '#ffffff',
   text: '#333333',
@@ -307,6 +330,11 @@ const JsonEditor = ({
   );
 };
 
+/**
+ * Converts an object that follows JSON standards to an Entity structure
+ * @param {*} json - The JSON object or value to convert
+ * @returns {Entity} The resulting Entity structure
+ */
 const jsonToEntity = (json) => {
   if (Array.isArray(json)) {
     return {
@@ -353,6 +381,19 @@ const extractJson = (entity) => {
   }
 };
 
+/**
+ * Interactive JSON Editor component
+ * @param {Object} props - Component props
+ * @param {Entity} [props.initialEntity={ dtype: 'object', attributes: [] }] - to define the initial entity for your use case, pass in any object through jsonToEntity()
+ * @param {function(Entity): void} [props.onChange] - Callback function called when the entity changes
+ * @param {function(string | null, string | null): void} [props.onExtract] - Callback function called with extracted JSON and potential error
+ * @param {Theme} [props.theme] - Custom theme object
+ * @param {string | number} [props.maxWidth] - Maximum width of the editor
+ * @param {string | number} [props.maxHeight] - Maximum height of the editor
+ * @param {string | number} [props.minWidth] - Minimum width of the editor
+ * @param {string | number} [props.minHeight] - Minimum height of the editor
+ * @returns {React.ReactElement} The InteractiveJsonEditor component
+ */
 const InteractiveJsonEditor = ({
   initialEntity = { dtype: 'object', attributes: [] },
   onChange,
