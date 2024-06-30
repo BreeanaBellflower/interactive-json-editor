@@ -11,6 +11,8 @@ npm install interactive-json-editor
 ## Preview
 [Code Sandbox](https://codesandbox.io/p/github/BreeanaBellflower/test-interactive-json-editor/main)
 
+![@breeanabellflower/interactive-json-editor jsoneditor](github.com/BreeanaBellflower/interactive-json-editor/blob/main/jsoneditor.gif?raw=true)
+
 In this preview and the below example usage, the core component is the interactive-json-editor and the textarea is just one way you could use it.
 
 ## Usage
