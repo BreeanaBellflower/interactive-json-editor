@@ -8,6 +8,11 @@ An interactive React component for editing JSON Components.
 npm install interactive-json-editor
 ```
 
+## Preview
+[Code Sandbox](https://codesandbox.io/p/github/BreeanaBellflower/test-interactive-json-editor/main)
+
+In this preview and the below example usage, the core component is the interactive-json-editor and the textarea is just one way you could use it.
+
 ## Usage
 
 ```jsx
